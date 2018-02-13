@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Schedule a Ride</title>
+	<link rel="stylesheet" type="text/css" href="P5.css">
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+</head>
+
+<body>
+	<div class = "head-bar"> <a href = "P5-home.html" > <img src="logo.png" alt = "logo"/> </a>
+		<!-- source of image: http://www.clker.com/cliparts/C/3/h/q/U/G/blue-car-hi.png -->
+
+	<i class="material-icons"> menu </i> <!-- MAKE THIS ICON THE DROPDOWN MENU -->
+	<select id = "dropdown">
+		<option>  </option>
+		<option> Scheduled Rides </option>
+		<option> Ride History </option>
+		<option> User Profile </option>
+		<option> Account Preferences </option>
+	</select>
+
+
+	</div>	
+
+	<div class = "form">
+		<h2>Schedule a Ride</h2>
+	<form> 
+		Enter Start Point <br>
+		<input type="radio" name="home" checked required> Default Home Address <br>
+		<input type="radio" name="home"> <input type="text" name="Address" placeholder ="Enter Address"> <br> <br> <br>
+
+		Enter Destination <br>
+		<input type="text" name="dest" required>  <br>
+		Desired Arrival Time <br>
+		<input type="date" name="date" min = "2018-02-14" required> 
+		<input type="time" name = "time" required> <br>
+		I want to be a ... <br>
+		<input type="radio" name="driver" required> Driver         
+		<input type="radio" name="driver"> Passenger <br> <br>
+
+		
+			<input type = "button" onclick = "showForm()" value = "Make a return trip"> 
+			<input type = "button" id = "one-way" onclick = "scheduleRide()" value = "Schedule one-way ride">
+			</button>
+
+
+
+	</form>
+
+	<form id = "return-form"> <!-- This is going to be hidden by default, and only show up if you click "make a return trip" -->
+		I want to leave work at ... <br>
+		<input type="time"> <br>
+
+		<input type = "button" onclick="scheduleReturnRide()" value = "Schedule round-trip ride">
+	</div>
+
+
+
+
+<script src = P5.js></script>
+</body>
+</html>
