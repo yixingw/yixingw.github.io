@@ -5,6 +5,8 @@
 	<link rel="stylesheet" type="text/css" href="P5.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
+
 </head>
 
 <body>
@@ -28,10 +30,10 @@
 	<form> 
 		Enter Start Point <br>
 		<input type="radio" name="home" checked required> Default Home Address <br>
-		<input type="radio" name="home"> <input type="text" name="Address" placeholder ="Enter Address"> <br> <br> <br>
+		<input type="radio" name="home"> <input type="text" id = "homeaddress" name="Address" placeholder ="Enter Address"> <br> <br> <br>
 
 		Enter Destination <br>
-		<input type="text" name="dest" required>  <br>
+		<input type="text" name="dest" id = "destaddress" required>  <br>
 		Desired Arrival Time <br>
 		<input type="date" name="date" min = "2018-02-14" required> 
 		<input type="time" name = "time" required> <br>
