@@ -1,29 +1,39 @@
-/* Header styling */
-.head-bar {
-	background-color: #778899;
-	height: 50px;
+html {
+	font-family: 'Open Sans', sans-serif;
 }
 
-.head-bar img {
+.head-bar {
+	background-color: #b3cef9;
+	height: 50px;
+	border-radius: 10px;
+	margin: 1px 1px 0px 1px;
+}
+
+#home-logo {
 	width: 50px;
 	height: 30px;
 	position: relative;
-	top: 12px;
-	left: 8px;
+	margin: 12px 8px;
+	float: left;
 }
 
-#dropdown {
-	float: right;
+.dropdown {
+	float: left;
 	position: relative;
-	right: 10px;
-	top: 5px;
+	margin: 5px;
 }
 
-
-.form {
+.form-wrapper {
+	display: flex;
 	text-align: center;
+	justify-content: center;
+	flex-direction: column;
 }
 
+#schedule-title {
+	margin: 1em;
+	margin-top: 2em;
+}
 
 #return-form {
 	display: none;
