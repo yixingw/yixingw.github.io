@@ -1,65 +1,75 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 	<title>Schedule a Ride</title>
 	<link rel="stylesheet" type="text/css" href="P5.css">
 	<link href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet">
-    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places"></script>
-
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+    		integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&sensor=false&libraries=places">
+    </script>
 </head>
-
 <body>
-	<div class = "head-bar"> <a href = "P5-home.html" > <img src="logo.png" alt = "logo"/> </a>
-		<!-- source of image: http://www.clker.com/cliparts/C/3/h/q/U/G/blue-car-hi.png -->
-
-	<i class="material-icons"> menu </i> <!-- MAKE THIS ICON THE DROPDOWN MENU -->
-	<select id = "dropdown">
-		<option>  </option>
-		<option> Scheduled Rides </option>
-		<option> Ride History </option>
-		<option> User Profile </option>
-		<option> Account Preferences </option>
-	</select>
-
-
+	<div class = "head-bar"> 
+		<a href = "index.html" >
+			<img id="home-logo" src="logo.png" alt = "logo"> 
+		</a>
+		<div class="dropdown">
+		    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" 
+		    		data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+		    Home
+		    </button>
+		    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+		        <a class="dropdown-item" href="#">Home</a>
+		        <a class="dropdown-item" href="#">Scheduled Rides</a>
+		        <a class="dropdown-item" href="#">My Profile</a>
+		        <a class="dropdown-item" href="#">Account Settings</a>
+		    </div>
+		</div>
 	</div>	
-
-	<div class = "form">
-		<h2>Schedule a Ride</h2>
-	<form> 
-		Enter Start Point <br>
-		<input type="radio" name="home" checked required> Default Home Address <br>
-		<input type="radio" name="home"> <input type="text" id = "homeaddress" name="Address" placeholder ="Enter Address"> <br> <br> <br>
-
-		Enter Destination <br>
-		<input type="text" name="dest" id = "destaddress" required>  <br>
-		Desired Arrival Time <br>
-		<input type="date" name="date" min = "2018-02-14" required> 
-		<input type="time" name = "time" required> <br>
-		I want to be a ... <br>
-		<input type="radio" name="driver" required> Driver         
-		<input type="radio" name="driver"> Passenger <br> <br>
-
-		
-			<input type = "button" onclick = "showForm()" value = "Make a return trip"> 
-			<input type = "button" id = "one-way" onclick = "scheduleRide()" value = "Schedule one-way ride">
-			</button>
-
-
-
-	</form>
-
-	<form id = "return-form"> <!-- This is going to be hidden by default, and only show up if you click "make a return trip" -->
-		I want to leave work at ... <br>
-		<input type="time"> <br>
-
-		<input type = "button" onclick="scheduleReturnRide()" value = "Schedule round-trip ride">
+	<div class ="form-wrapper">
+		<div id="schedule-title">
+			<h2>Schedule a Ride</h2>
+		</div>
+		<div id="schedule-form">
+			<form>
+				<b>Enter Origin</b><br>
+				<input type="radio" name="home" checked required> Default Home Address<br>
+				<input type="radio" name="home"> <input type="text" id="homeaddress" name="Address" 
+				placeholder="Enter Address"><br><br><br>
+				<b>Enter Destination</b> <br>
+				<input type="radio" name="work" checked required> Default Work Address<br>
+				<input type="radio" name="work"> <input type="text" id="workaddress" name="Address" 
+				placeholder="Enter Address"><br><br><br>
+				<b>Desired Arrival Time</b> <br>
+				<input type="date" name="date" min="2018-02-14" required> 
+				<input type="time" name ="time" required><br><br>
+				I want to be a ... <br>
+				<input type="radio" name="driver" required> Driver         
+				<input type="radio" name="driver">Passenger<br><br>
+				<input type = "submit" onclick = "showForm()" value = "Make a return trip">
+				<input type = "submit" id = "one-way" onclick = "scheduleRide()" value = "Schedule one-way ride">
+			</form>
+		</div>
+		<div id="return">
+			<form id = "return-form"> <!-- hidden by default -->
+				I want to leave work at ... <br>
+				<input type="time"> <br><br>
+				<input type = "button" onclick="scheduleReturnRide()" value = "Schedule round-trip ride">
+			</form>
+		</div>
 	</div>
-
-
-
-
-<script src = P5.js></script>
-</body>
+	<script src = P5.js></script>
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+			integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+			crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+			integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+			crossorigin="anonymous"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+			integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+			crossorigin="anonymous"></script>
+	</body>
 </html>
