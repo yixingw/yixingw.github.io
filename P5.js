@@ -21,7 +21,7 @@ function scheduleRide() {
   var input2 = document.getElementById("destaddress");
   new google.maps.places.Autocomplete(input1);
   new google.maps.places.Autocomplete(input2);
-
-
 }
+
 google.maps.event.addDomListener(window, 'load', initialize);
+
