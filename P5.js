@@ -10,9 +10,8 @@ function scheduleRide() {
 
 
  function showForm() {
- 	document.getElementById("one-way").style.display = 'none';
- 	document.getElementById("return-form").style.display = "block";
-
+ 	document.getElementById("one-way").style.display = "none";
+ 	document.getElementById("return").style.display = "block";
  }
 
 
@@ -21,7 +20,7 @@ function scheduleRide() {
   var input2 = document.getElementById("destaddress");
   new google.maps.places.Autocomplete(input1);
   new google.maps.places.Autocomplete(input2);
-
-
 }
+
 google.maps.event.addDomListener(window, 'load', initialize);
+
