@@ -10,9 +10,8 @@ function scheduleRide() {
 
 
  function showForm() {
- 	document.getElementById("one-way").style.display = 'none';
- 	document.getElementById("return-form").style.display = "block";
-
+ 	document.getElementById("one-way").style.display = "none";
+ 	document.getElementById("return").style.display = "block";
  }
 
 

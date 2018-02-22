@@ -2,41 +2,32 @@ html {
 	font-family: 'Open Sans', sans-serif;
 }
 
-.head-bar {
-	background-color: #b3cef9;
-	height: 50px;
-	border-radius: 10px;
-	margin: 1px 1px 0px 1px;
-}
-
-#home-logo {
-	width: 50px;
-	height: 30px;
-	position: relative;
-	margin: 12px 8px;
-	float: left;
-}
-
-.dropdown {
-	float: left;
-	position: relative;
-	margin: 5px;
+.navbar {
+    -webkit-box-shadow: 0 8px 6px -6px #999;
+    -moz-box-shadow: 0 8px 6px -6px #999;
+    box-shadow: 0 8px 6px -6px #999;
 }
 
 .form-wrapper {
 	display: flex;
-	text-align: center;
-	justify-content: center;
+	text-align: left;
+	align-items: center;
 	flex-direction: column;
 }
 
 #schedule-title {
-	margin: 1em;
-	margin-top: 2em;
+	margin: 0.5em;
+	color: #484848;
+	font-family: 'Montserrat', sans-serif;
+	font-size: 3em;
 }
 
-#return-form {
+#schedule-form {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#return {
 	display: none;
-	position: relative;
-	top: 20px;
+	margin-top: 2em;
+	margin-right: 20px;
 }
