@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Scheduled Rides</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="P5.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+        crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="home.html">
+      <img class="homelogo" src='logo.png' alt='home'>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+        aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Schedule a Ride</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="scheduled_rides.html">Upcoming Rides</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ride_history.html">Ride History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="my_profile.html">My Profile</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"      
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Account 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Preferences</a>
+            <a class="dropdown-item" href="#">Payment</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div id="ride_history_table_wrapper">
+    <table class="table table-hover table-striped" id="ride_history_table">
+      <thead>
+        <tr>
+          <th scope="col">Date and Time</th>
+          <th scope="col">Origin</th>
+          <th scope="col">Destination</th>
+          <th scope="col">Passengers</th>
+          <th scope ="col"> </th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr id = "ride1">
+          <th scope="row">Mar 5, 8:00AM</th>
+          <td>2420 Campus Dr, Evanston, IL 60201</td>
+          <td>636 Church Ave, Evanston, IL 60201</td>
+          <td>Roger</td>
+          <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onclick ="rideVar(1)"><i class = "material-icons">clear</i></button>
+        </tr>
+        <tr id = "ride2">
+          <th scope="row">Mar 5, 5:30PM</th>
+          <td>636 Church Ave, Evanston, IL 60201</td>
+          <td>2420 Campus Dr, Evanston, IL 60201</td>
+          <td>Roger</td>
+          <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onclick ="rideVar(2)"><i class = "material-icons">clear</i></button>
+        </tr>
+        <tr id = "ride3">
+          <th scope="row">Mar 9, 9:00AM</th>
+          <td>1300 Orrington Ave, Evanston, IL 60201</td>
+          <td>Willis Tower, Chicago, IL 60606</td>
+          <td>Juan, Jamie</td> 
+          <td><button type="button" class="btn btn-danger" data-toggle="modal" data-target="#myModal" onclick ="rideVar(3)"><i class = "material-icons">clear</i></button>
+        </tr>
+         <tr id = "norides" style = "display: none;"> <td colspan="5"> No scheduled rides!</td> </tr>
+      </tbody>
+    </table>
+
+<!-- modal to cancel rides -->
+<div id="myModal" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+     <div class = "modal-content">
+        <div class="modal-body" style = "font-size: 18pt;">
+          <br> Do you want to cancel this ride? <br> <br>
+
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" 
+              data-dismiss="modal" onclick="cancelRide()">Cancel</button>
+          <button type="button" class="btn btn-primary" data-dismiss="modal"">Go back</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+  </div>
+  <script src = P5.js></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+      crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+      crossorigin="anonymous"></script>
+  </body>
+</html>

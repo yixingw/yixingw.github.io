@@ -2,10 +2,18 @@ html {
 	font-family: 'Open Sans', sans-serif;
 }
 
+.homelogo {
+	width: 60px;
+	height: 60px;
+	margin: 0;
+	margin-left: 0.75rem;
+}
+
 .navbar {
     -webkit-box-shadow: 0 8px 6px -6px #999;
     -moz-box-shadow: 0 8px 6px -6px #999;
     box-shadow: 0 8px 6px -6px #999;
+    padding: 0 !important; /*theres probably a better way to do this */
 }
 
 .form-wrapper {
@@ -26,16 +34,10 @@ html {
 	font-family: 'Open Sans', sans-serif;
 }
 
-#return {
-	display: none;
-	margin-top: 2em;
-	margin-right: 20px;
+#return_dropdown_arrow {
+    vertical-align: middle;
+    margin-top: -2px;
 }
-
-/* Bordered form */
-/*form {
-    border: 3px;
-}*/
 
 /* Full-width inputs */
 input[type=text], input[type=password] {
@@ -45,22 +47,6 @@ input[type=text], input[type=password] {
     display: inline-block;
     border: 1px solid #ccc;
     box-sizing: border-box;
-}
-
-/* Set a style for all buttons */
-button {
-    background-color: #4CAF50;
-    color: white;
-    padding: 14px 20px;
-    margin: 8px 0;
-    border: none;
-    cursor: pointer;
-    width: 100%;
-}
-
-/* Add a hover effect for buttons */
-button:hover {
-    opacity: 0.8;
 }
 
 /* Extra style for the cancel button (red) */
@@ -104,3 +90,132 @@ span.psw {
         width: 100%;
     }
 } 
+
+
+/*Profile stuff */
+#incorrect {
+    display: none;
+    color: red;
+}
+
+.prof-image {
+    float: left;
+}
+
+.prof-image img {
+    width: 150px;
+    height: 150px;
+}
+
+#edit-button {
+    width: 100px;
+    height: 30px;
+}
+
+.info-wrapper {
+    position: relative;
+    top: 10px;
+    left: 20px;
+}
+
+.prof-wrapper {
+    display: inline-block;
+    position: relative;
+    left: 500px;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    max-width: 400px;
+    margin: auto;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    
+    
+}
+
+.prof-title {
+    color: grey;
+    font-size: 18px;
+    
+}
+
+/*button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: black;
+    background-color: #e3f2fd;
+    text-align: center;
+    cursor: pointer;
+    width: 100%;
+    font-size: 18px; 
+}*/
+
+
+/*a{
+    text-decoration: none;
+    font-size: 22px;
+    color: black;
+}*/
+
+.checked {
+    color: orange;
+}
+
+.stars{
+    position: relative;
+    bottom: 20px;
+}
+
+/* Style the button that is used to open and close the collapsible content */
+.collapsible {
+  background-color: #eee;
+  color: #444;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+  text-align: center;
+
+}
+
+/* Add a background color to the button if it is clicked on (add the .active class with JS), and when you move the mouse over it (hover) */
+.active, .collapsible:hover {
+  background-color: #ccc;
+}
+
+/* Style the collapsible content. Note: hidden by default */
+.content {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+#ride_history_table_wrapper {
+    padding: 1rem;
+    -webkit-box-shadow: 0 10px 6px -6px #777;
+       -moz-box-shadow: 0 10px 6px -6px #777;
+            box-shadow: 0 10px 6px -6px #777;
+}
+
+
+
+#my_rating_wrapper {
+min-height: 500px;
+    text-align: left;
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 20px;
+
+}
+
+
+
+
+

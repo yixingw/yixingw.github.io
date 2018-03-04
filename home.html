@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Schedule a Ride</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="P5.css">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Open+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+      crossorigin="anonymous">
+  <script src="https://maps.googleapis.com/maps/api/js?key=
+      AIzaSyDZscDuumcEPN1Ss9swZYfqJvhnwyxLZfc&libraries=places"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="P5.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #e3f2fd;">
+    <a class="navbar-brand" href="home.html">
+      <img class="homelogo" src='logo.png' alt='home'>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" 
+        data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" 
+        aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavDropdown">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link" href="home.html">Schedule a Ride</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="scheduled_rides.html">Upcoming Rides</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="ride_history.html">Ride History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" id='proflink' href='' onclick="return load_profile()">My Profile</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink"      
+              data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Account 
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" href="#">Preferences</a>
+            <a class="dropdown-item" href="#">Payment</a>
+            <a class="dropdown-item" href="#">Logout</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <div class ="form-wrapper">
+    <div id="schedule-title">
+      Schedule a Ride
+    </div>
+    <div id="schedule-form">
+      <form id="primaryScheduleForm" action='ride_confirmation.html'>
+        <p> <b>Today, I will be a ...<b></p>
+        <div class="btn-group" data-toggle="buttons">
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="option1" autocomplete="off"> Driver
+          </label>
+          <label class="btn btn-primary">
+            <input type="radio" name="options" id="option2" autocomplete="off"> Passenger
+          </label>
+          <label class="btn btn-primary active">
+            <input type="radio" name="options" id="option3" autocomplete="off" checked> No Preference
+          </label> 
+        </div><br><br>
+        <b>Enter Origin</b><br>
+        <input type="text" id="homeaddress" name="Address" 
+            placeholder="4321 DefaultUserOrigin, Evanston, IL" required><br><br>
+        <b>Enter Destination</b> <br> 
+        <input type="text" id="destaddress" name="Address" 
+            placeholder="9876 DefaultUserDest, Chicago, IL" required><br><br>
+        <b>Desired Arrival Time</b> <br>
+        <input id="datepicker" type="date" name="date" min="2018-02-14" required> 
+        <input type="time" name="time" value="08:00" required><br><br>
+        <a class="btn btn-secondary" data-toggle="collapse" href="#collapseExample" role="button" 
+            aria-expanded="false" aria-controls="collapseExample">
+            Schedule a Return Trip <i id="return_dropdown_arrow" class="material-icons">&#xE5C5;</i>
+        </a><br><br>
+        <div class="collapse" id="collapseExample">
+          I want to leave work at ... <br>
+          <input type="time" value="17:00"> <br><br>    
+        </div> 
+        <input id="scheduleSubmit" type="submit" class="btn btn-primary btn-success" value="Schedule Ride">
+      </form>
+    </div>
+  </div> <br>
+  <script src = P5.js></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" 
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" 
+      crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" 
+      integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" 
+      crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" 
+      integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" 
+      crossorigin="anonymous"></script>
+  </body>
+</html>
